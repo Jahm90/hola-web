@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botón en el centro</title>
+    <title>Botón en el Centro</title>
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Opcional: fondo claro */
         }
         #message {
             margin-top: 20px;
             font-size: 20px;
             color: #333;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
-    <div>
-        <button onclick="showMessage()">Haz clic aquí</button>
-        <label id="message"></label>
-    </div>
+    <button onclick="showMessage()">Haz clic aquí</button>
+    <div id="message"></div> <!-- Usamos un div en lugar de label -->
 
     <script>
         function showMessage() {
+            console.log("showMessage() llamada");
             document.getElementById("message").textContent = "Hola Web";
         }
     </script>
