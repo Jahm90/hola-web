@@ -31,6 +31,10 @@ const myChart = new Chart(ctx, {
                     displayFormats: {
                         second: 'HH:mm:ss'
                     }
+                },
+                ticks: {
+                    autoSkip: true,
+                    maxTicksLimit: 6 // Limitar el número de ticks en el eje X
                 }
             }
         },
